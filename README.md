@@ -116,7 +116,7 @@ Appends new transactions
 Updates the enterprise Gold Layer
 This approach reduces processing time and supports scalable daily ingestion.
 
-# IIncremental Loda Pipeline
+# IIncremental Load Pipeline
 AWS S3
 ↓
 Incremental Orders File
