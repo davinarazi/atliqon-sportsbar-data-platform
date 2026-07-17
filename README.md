@@ -27,6 +27,7 @@ The solution ingests raw operational data into a Medallion Architecture, perform
 | Gross Price | Parent  | Clean Dimension   | Gold   |
 | Fact Orders | Parent  | Historical Sales  | Gold   |
 | Customers   | Child   | Raw Master Data   | Bronze |
+| Gross Price | Child   | Raw Master Data   | Bronze |
 | Products    | Child   | Raw Master Data   | Bronze |
 | Orders      | Child   | Incremental Files | Bronze |
 
@@ -114,3 +115,54 @@ Validates records
 Appends new transactions
 Updates the enterprise Gold Layer
 This approach reduces processing time and supports scalable daily ingestion.
+
+# IIncremental Loda Pipeline
+AWS S3
+↓
+Incremental Orders File
+↓
+Lakeflow Job
+↓
+PySpark
+↓
+Validation
+↓
+Append Gold
+↓
+Archive
+
+# Dashboard
+The interactive dashboard provides:
+KPI
+Total Revenue
+Total Quantity
+Total Products
+Total Records
+Business Insights
+Revenue Trend
+Revenue by Channel
+Top 10 Products
+Bottom 5 Products
+Top Division Revenue
+Product Variant Analysis
+
+Interactive filters include:
+Year
+Quarter
+Month
+Channel
+
+# Skills Demonstrated
+End-to-End Data Engineering
+AWS S3 Data Lake
+Medallion Architecture
+PySpark ETL
+Incremental Data Processing
+Delta Lake
+Spark SQL
+Data Modeling
+Star Schema
+SQL View Engineering
+Dashboard Development
+Enterprise Data Integration
+Data Quality Engineering
